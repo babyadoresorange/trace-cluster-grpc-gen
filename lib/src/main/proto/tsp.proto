@@ -1,0 +1,34 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_outer_classname = "TspProto";
+
+package org.eclipse.tracecompass.incubator.internal.trace.cluster.core.tsp.proto;
+
+import "google/protobuf/empty.proto";
+
+service Tsp {
+    rpc GetTrace(UUID) returns (Traces.Trace) {}
+    rpc GetTraces(google.protobuf.Empty) returns (Traces) {}
+    rpc PutTraces(TracesMetadata) returns (Traces) {}
+    rpc DeleteTrace(UUID) returns (Response) {}
+}
+
+message TracesMetadata {
+    string path = 1;
+    string name = 2;
+    string typeID = 3;
+}
+
+message Traces {
+    message Trace {
+    }
+    repeated Trace trace = 1;
+}
+
+message UUID {
+    string uuid = 1;
+}
+
+message Response {
+    bool status = 1;
+}

@@ -1,0 +1,9 @@
+# ----
+# Automatically Generated .dropboxignore file at Thu 25 Mar 2021 02:01:30 PM EDT
+# ----
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+# ----
