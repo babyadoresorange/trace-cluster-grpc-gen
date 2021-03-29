@@ -2,7 +2,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_outer_classname = "TspProto";
 
-package org.eclipse.tracecompass.incubator.internal.trace.cluster.core.tsp.proto;
+package org.eclipse.tracecompass.incubator.internal.trace.cluster.core.tsp.grpc;
 
 import "google/protobuf/empty.proto";
 
